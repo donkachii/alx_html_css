@@ -3,7 +3,7 @@
 :root {
   --main-primary-color: #ffffff;
   --main-secondary-color: #c271ff;
-  --font: "source-sans-pro", sans-serif;
+  --font: "Source Sans Pro", sans-serif;
 }
 
 *,
@@ -25,6 +25,7 @@ html,
 body {
   height: 100%;
   margin: auto;
+  font-family: var(--font);
 }
 
 body {
@@ -76,24 +77,29 @@ header ul li a {
   align-items: center;
   justify-content: center;
   background-image: url("./images/Object.png");
+  background-color: #000000;
   background-repeat: no-repeat;
   background-size: cover;
   height: 1093px;
   text-align: center;
+  padding-top: 130px;
 }
 
 /* .first_section > .schooled */
 
 .first_section > .schooled h1 {
   font-size: 120px;
+  font-weight: bold;
+  padding-bottom: 15px;
 }
 
 .first_section > .schooled span {
-  padding: 0 10px;
+  padding: 0 25px;
+  font-weight: bold;
 }
 
 .first_section > .schooled > div {
-  padding-top: 34px;
+  padding-top: 42px;
 }
 
 .first_section > .schooled > div > button {
@@ -102,18 +108,44 @@ header ul li a {
   border-radius: 30px;
   padding: 15.5px 20.5px;
   margin-bottom: 120px;
+  font-weight: 600;
 }
 
 .professionals > h2 {
   font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 67px;
 }
 
 .professionals > h2 > span {
   color: var(--main-secondary-color);
+  font-weight: bold;
 }
 
 .professionals > div {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 136px;
+}
+
+.professionals > div > div {
+  width: 150px;
+}
+
+.professionals img {
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.professionals h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 17px;
+}
+
+.professionals p {
+  font-style: italic;
 }
 
 .quotes {
@@ -124,21 +156,29 @@ header ul li a {
   color: var(--main-primary-color);
   gap: 53px;
   padding: 73px 0;
+  font-size: 22px;
+  font-weight: 400;
 }
 
-.quotes > blockquote {
-  max-width: 730px;
+.quotes img {
+  width: 160px;
+}
+
+.quotes blockquote {
+  width: 730px;
+  margin-bottom: 14px;
+  font-style: italic;
+}
+
+.quotes h3 {
+  font-weight: 700;
+  padding-bottom: 4px;
 }
 
 .tutorials {
   padding: 73px 0;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
-}
-
-input[type="email"] {
-  font-size: 20px;
-  padding: 12px;
 }
