@@ -1,0 +1,144 @@
+@import url("https://use.typekit.net/hou6asi.css");
+
+:root {
+  --main-primary-color: #ffffff;
+  --main-secondary-color: #c271ff;
+  --font: "source-sans-pro", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html,
+body {
+  height: 100%;
+  margin: auto;
+}
+
+body {
+  line-height: 1;
+  color: var(--main-primary-color);
+  max-width: 1440px;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+header nav {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--main-primary-color);
+  width: 1440px;
+  padding: 26px 168px;
+}
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  display: inline;
+  vertical-align: middle;
+  padding: 0 20px;
+}
+
+header ul li:last-child {
+  padding-right: 0;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.first_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./images/Object.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1093px;
+  text-align: center;
+}
+
+/* .first_section > .schooled */
+
+.first_section > .schooled h1 {
+  font-size: 120px;
+}
+
+.first_section > .schooled span {
+  padding: 0 10px;
+}
+
+.first_section > .schooled > div {
+  padding-top: 34px;
+}
+
+.first_section > .schooled > div > button {
+  background-color: var(--main-secondary-color);
+  color: var(--main-primary-color);
+  border-radius: 30px;
+  padding: 15.5px 20.5px;
+  margin-bottom: 120px;
+}
+
+.professionals > h2 {
+  font-size: 32px;
+}
+
+.professionals > h2 > span {
+  color: var(--main-secondary-color);
+}
+
+.professionals > div {
+  display: flex;
+}
+
+.quotes {
+  background-color: var(--main-secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-primary-color);
+  gap: 53px;
+  padding: 73px 0;
+}
+
+.quotes > blockquote {
+  max-width: 730px;
+}
+
+.tutorials {
+  padding: 73px 0;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+input[type="email"] {
+  font-size: 20px;
+  padding: 12px;
+}
