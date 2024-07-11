@@ -1,0 +1,216 @@
+@import url("https://use.typekit.net/hou6asi.css");
+
+:root {
+  --main-primary-color: #ffffff;
+  --main-secondary-color: #ff6565;
+  --main-tertiary-color: #071629;
+  --bar-height: 2px;
+  --bar-weight: 20px;
+  --harmbuger-gap: 4px;
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--harmbuger-gap) * 2);
+  --font: "Source Sans Pro", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html,
+body {
+  height: 100%;
+  margin: auto;
+  font-family: var(--font);
+}
+
+body {
+  line-height: 1;
+  color: var(--main-primary-color);
+  max-width: 1000px;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+a:hover,
+a:active {
+  color: #ff6565;
+}
+
+button:hover,
+button:active {
+  opacity: 0.9;
+}
+
+header {
+  position: absolute;
+  color: var(--main-primary-color);
+  width: 100%;
+  max-width: 1000px;
+  padding: 26px 68px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  display: inline;
+  vertical-align: middle;
+  padding: 0 20px;
+}
+
+header ul li:last-child {
+  padding-right: 0;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+header nav img {
+  height: 32px;
+  width: 161px;
+}
+
+.hamburger_menu {
+  display: none;
+}
+
+.first_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background-image: url("./images/headphones_hero_1.jpg");
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+  text-align: center;
+  padding-bottom: 115px;
+  padding: inherit 68px;
+}
+
+.first_section h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.first_section h6 {
+  font-weight: bold;
+  padding-bottom: 39px;
+}
+
+.first_section button {
+  border-radius: 22px;
+  background-color: var(--main-secondary-color);
+  color: var(--main-primary-color);
+  padding: 13px 31px;
+  margin-bottom: 65px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.first_section p {
+  max-width: 637px;
+  line-height: 26px;
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    width: 100%;
+    padding: 26px 21px;
+  }
+
+  header nav {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  header ul li {
+    display: block;
+    padding: 20px 0;
+  }
+
+  .hamburger_menu {
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 21px;
+    top: calc((((26px * 2) + (32px / 2)) / 2));
+    gap: var(--harmbuger-gap);
+    cursor: pointer;
+  }
+
+  .hamburger_menu::before,
+  .hamburger_menu::after,
+  .hamburger_menu input {
+    content: "";
+    width: var(--bar-weight);
+    height: var(--bar-height);
+    background-color: var(--main-primary-color);
+    border-radius: 2px;
+    transform-origin: left center;
+    transition: opacity var(--animation-timing), width var(--animation-timing),
+      rotate var(--animation-timing), translate var(--animation-timing);
+  }
+
+  .hamburger_menu input {
+    appearance: none;
+    width: 13px;
+    outline: none;
+    pointer-events: none;
+  }
+
+  .hamburger_menu:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
+  }
+
+  .hamburger_menu:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
+  }
+
+  .hamburger_menu input:checked {
+    opacity: 0;
+    width: 0;
+  }
+
+  .hamburger_menu:has(input:checked) ~ .sidebar {
+    display: block;
+  }
+}
