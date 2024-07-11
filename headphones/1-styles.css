@@ -143,7 +143,7 @@ header nav img {
 }
 
 .about_section {
-  padding: 110px 0;
+  padding: 110px 26px;
   color: var(--main-tertiary-color);
   display: flex;
   flex-direction: column;
@@ -166,10 +166,12 @@ header nav img {
 .about_container {
   display: flex;
   gap: 58px;
+  justify-content: center;
 }
 
 .about_column {
   max-width: 207px;
+  flex: 1 1 200px;
 }
 
 .about_column i {
@@ -260,5 +262,15 @@ header nav img {
 
   .hamburger_menu:has(input:checked) ~ .sidebar {
     display: block;
+  }
+
+  .about_container {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .about_container {
+    flex-wrap: wrap;
   }
 }
