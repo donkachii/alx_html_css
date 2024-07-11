@@ -178,12 +178,18 @@ header nav img,
 .about_column {
   max-width: 207px;
   flex: 1 1 200px;
+  transition: transform 0.5s;
 }
 
 .about_column i {
   color: var(--main-secondary-color);
   font-size: 95px;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.about_column:hover {
+  transform: scale(1.5);
 }
 
 .about_column h6 {
@@ -232,6 +238,12 @@ header nav img,
 
 .result_column {
   position: relative;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.result_column:hover {
+  transform: scale(1.2);
 }
 .result_column img {
   width: 190px;
