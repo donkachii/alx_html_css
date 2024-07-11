@@ -37,7 +37,7 @@ body {
 body {
   line-height: 1;
   color: var(--main-primary-color);
-  max-width: 1000px;
+  max-width: 1400px;
 }
 
 img,
@@ -61,7 +61,10 @@ header {
   color: var(--main-primary-color);
   width: 100%;
   max-width: 1000px;
-  padding: 26px 68px;
+  margin: auto;
+  top: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 header nav {
@@ -91,7 +94,8 @@ header ul li a {
   color: #ffffff;
 }
 
-header nav img {
+header nav img,
+.footer img {
   height: 32px;
   width: 161px;
 }
@@ -113,7 +117,7 @@ header nav img {
   height: 800px;
   text-align: center;
   padding-bottom: 115px;
-  padding: inherit 68px;
+  /* padding: inherit 68px; */
 }
 
 .first_section h2 {
@@ -126,7 +130,8 @@ header nav img {
   padding-bottom: 39px;
 }
 
-.first_section button {
+.first_section button,
+.contact_section button {
   border-radius: 22px;
   background-color: var(--main-secondary-color);
   color: var(--main-primary-color);
@@ -255,6 +260,9 @@ header nav img {
   header {
     width: 100%;
     padding: 26px 21px;
+    top: 0;
+    left: 0;
+    transform: none;
   }
 
   header nav {
@@ -321,6 +329,13 @@ header nav img {
 
   .hamburger_menu:has(input:checked) ~ .sidebar {
     display: block;
+  }
+
+  .first_section,
+  .about_section,
+  .result_section {
+    padding-left: 19px;
+    padding-right: 19px;
   }
 
   .about_container,
